@@ -1,0 +1,15 @@
+// script.js
+
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Formani yuborishni to'xtatish
+    
+    const name = document.querySelector('#name').value;
+    const message = document.querySelector('#message').value;
+    
+    if (name && message) {
+        alert(`Xabaringiz yuborildi, ${name}!`);
+        document.querySelector('form').reset(); // Formani tozalash
+    } else {
+        alert('Iltimos, barcha maydonlarni to\'ldiring.');
+    }
+});
